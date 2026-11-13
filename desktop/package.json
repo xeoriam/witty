@@ -1,0 +1,62 @@
+{
+  "name": "witty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Witty — standalone desktop English writing assistant",
+  "main": "main.cjs",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "electron .",
+    "pack": "pnpm build && electron-builder --dir",
+    "dist": "pnpm build && electron-builder --win nsis portable"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "build": {
+    "appId": "com.local.witty",
+    "productName": "Witty",
+    "copyright": "Copyright © 2026",
+    "directories": {
+      "output": "../release",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "host/**/*",
+      "renderer/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../index.js",
+        "to": "index.js"
+      }
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false,
+      "shortcutName": "Witty",
+      "include": "build/installer.nsh",
+      "artifactName": "${name}-${version}-setup.${ext}"
+    },
+    "portable": {
+      "artifactName": "${name}-${version}-portable.${ext}"
+    }
+  }
+}

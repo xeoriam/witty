@@ -1,0 +1,3 @@
+- insert:
+    - id: witty
+      name: '@local/witty'

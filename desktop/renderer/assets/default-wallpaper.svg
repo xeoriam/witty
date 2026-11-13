@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050a12"/>
+      <stop offset="0.45" stop-color="#0a1524"/>
+      <stop offset="1" stop-color="#05080f"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.18" cy="0.12" r="0.65">
+      <stop offset="0" stop-color="#2f5f8f" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2f5f8f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.85" cy="0.6" r="0.7">
+      <stop offset="0" stop-color="#8a6f3f" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#8a6f3f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb2e0" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#7fb2e0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#base)"/>
+  <rect width="1600" height="1000" fill="url(#glowA)"/>
+  <rect width="1600" height="1000" fill="url(#glowB)"/>
+  <path d="M0 760 C 260 700, 520 820, 800 760 C 1080 700, 1340 800, 1600 740 L 1600 1000 L 0 1000 Z" fill="url(#wave)"/>
+  <path d="M0 850 C 300 790, 560 900, 860 840 C 1140 786, 1380 870, 1600 820 L 1600 1000 L 0 1000 Z" fill="#05080f" opacity="0.55"/>
+</svg>

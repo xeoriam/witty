@@ -1,0 +1,46 @@
+{
+  "name": "@local/witty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Witty：逐句英语打字与翻译、考研阅读出题、作文训练、AI 精读与收藏夹。",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "build.mjs",
+    "src/**/*.js",
+    "vendor/*",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "INSTALL.md",
+    "USAGE.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "devDependencies": {
+    "mammoth": "1.13.0"
+  }
+}

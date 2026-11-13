@@ -1,0 +1,71 @@
+/*
+ * P0 fallback theme.
+ *
+ * The plugin's CSS was written against Harness design tokens (`--dsw-*`). The
+ * standalone shell has no Harness theme, so this file provides the 16 tokens the
+ * source actually references, in a dark glass palette. P3 replaces this with a
+ * full standalone theme.
+ */
+:root {
+  --dsw-alias-bg-base: #070d14;
+  --dsw-alias-bg-elevated: #101823;
+  --dsw-alias-bg-layer-1: rgba(16, 22, 29, 0.82);
+  --dsw-alias-bg-layer-2: rgba(28, 35, 43, 0.66);
+  --dsw-alias-border-l1: rgba(255, 255, 255, 0.14);
+  --dsw-alias-border-l2: rgba(255, 255, 255, 0.22);
+  --dsw-alias-border-secondary: rgba(255, 255, 255, 0.1);
+  --dsw-alias-brand-primary: #d8c7a3;
+  --dsw-alias-label-primary: #f4f7f8;
+  --dsw-alias-label-secondary: rgba(244, 247, 248, 0.66);
+  --dsw-alias-label-tertiary: rgba(244, 247, 248, 0.46);
+  --dsw-alias-state-error: #ff8a8a;
+  --dsw-alias-state-error-primary: #ff6b6b;
+  --dsw-alias-state-idle-primary: rgba(244, 247, 248, 0.5);
+  --dsw-alias-state-success-primary: #7fdca4;
+  --dsw-alias-state-warn-primary: #ffc46b;
+
+  /* Standalone default wallpaper (served from renderer/assets). Setting this
+     also stops the plugin CSS from requesting the Harness static asset. */
+  --tp-wallpaper: url("/assets/default-wallpaper.svg");
+
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #070d14;
+  color: var(--dsw-alias-label-primary);
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(216, 199, 163, 0.35);
+}
+
+/* Scrollbars that fit the dark palette instead of the white Windows default. */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}

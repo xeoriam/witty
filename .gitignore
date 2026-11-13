@@ -1,0 +1,26 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 构建产物
+release/
+desktop/renderer/app.bundle.js
+desktop/renderer/vendor/
+
+# 本地运行数据（绝不提交）
+runtime/
+data/
+.cache/
+snapshots/
+backups/
+*.log
+
+# 密钥与签名
+*.pfx
+*.password.txt
+*.key
+secrets/
+
+# 系统
+Thumbs.db
+.DS_Store
