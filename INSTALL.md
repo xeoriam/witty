@@ -2,9 +2,9 @@
 
 本包是一个 **DSH 插件（bundle）**，安装后 DSH 左侧栏会出现 **Witty** 入口。
 
-- 包名：`@local/witty`
+- npm 包名：`dsh-witty`
 - 插件行 id：`witty`
-- 客户端 bundle id：`@local/witty`
+- 客户端 bundle id：`dsh-witty`
 - 宿主路由前缀：`/plugins/witty`
 
 > 代码基线是原「英语学习助手 / typing-practice」插件 0.2.0，只做了改名与打包，**没有增删学习功能**。
@@ -57,7 +57,16 @@ witty-plugin\
 
 ## 三、安装
 
-### 方式 A：交给 DSH 助手装（最省事）
+### 方式 0：从 npm 安装（一条命令）
+
+```bash
+dsh plugin --profile web add dsh-witty
+```
+
+桌面端：**设置 → 插件 → 添加插件**，填 `dsh-witty` 后安装。
+桌面端的 `desktop` profile 由应用托管，命令行 `dsh plugin --profile desktop …` 会被拒绝，这是设计如此。
+
+### 方式 A：交给 DSH 助手装（本地目录）
 
 1. 把压缩包解压到任意固定目录，例如 `D:\Tools\witty-plugin`。
 2. 在 DSH 里对助手说：

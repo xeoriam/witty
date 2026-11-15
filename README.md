@@ -13,6 +13,18 @@
 
 学习功能两边一致。
 
+## 安装（DSH 插件）
+
+```bash
+dsh plugin --profile web add dsh-witty
+```
+
+桌面端：**设置 → 插件 → 添加插件**，填 `dsh-witty`。
+
+npm 页面：https://www.npmjs.com/package/dsh-witty
+
+前置：DSH `0.2.2` 系列，并在「设置 → 模型」接入 DeepSeek（插件通过 Harness 的模型接缝调用，不单独保存 Key）。
+
 ## 目录结构
 
 ```

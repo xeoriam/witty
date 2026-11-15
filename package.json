@@ -1,9 +1,27 @@
 {
-  "name": "@local/witty",
+  "name": "dsh-witty",
   "version": "1.0.0",
-  "private": true,
-  "description": "Witty：逐句英语打字与翻译、考研阅读出题、作文训练、AI 精读与收藏夹。",
+  "description": "Witty：逐句英语打字与翻译、考研阅读出题、AI 精读、作文训练与收藏夹（DeepSeek Harness 插件）。",
+  "license": "MIT",
   "type": "module",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "english",
+    "typing",
+    "translation",
+    "essay",
+    "favorites"
+  ],
+  "homepage": "https://github.com/xeoriam/witty",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeoriam/witty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xeoriam/witty/issues"
+  },
   "scripts": {
     "build": "node build.mjs"
   },
@@ -24,7 +42,8 @@
     "icon.svg",
     "README.md",
     "INSTALL.md",
-    "USAGE.md"
+    "USAGE.md",
+    "LICENSE"
   ],
   "dsh": {
     "bundle": {
